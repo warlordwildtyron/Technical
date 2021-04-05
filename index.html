@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Technical Documentation</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="flex">
+      <nav id="navbar">
+        <header id="Getting_Started_with_React">Get Started with React</header>
+        <ul>
+          <li><a href="#Hello_React" class="nav-link">Learn basic React</a></li>
+          <li><a href="#Use_cases" class="nav-link">Uses of React</a></li>
+          <li><a href="#How_does_React_use_JavaScript?" class="nav-link">How does React utilizes JavaScript?</a></li>
+          <li><a href="#Setting_up_your_first_React_app" class="nav-link">Setting your first React app</a></li>
+          <li><a href="#Exploring_our_first_React_component_App" class="nav-link">Exploring our first React component App</a></li>
+        </ul>
+      </nav>
+
+    <main id="main-doc">
+      <section class="main-section" id="Hello_React">
+        <header><a href="#Hello_React">Learn Basic React</a></header>
+        <p>
+          React is a library for building user
+          interfaces. React is not a framework – it's not even exclusive to the
+          web. It's used with other libraries to render to certain environments.
+          For instance, React Native can be used to build mobile applications;
+          React 360 can be used to build virtual reality applications; and there
+          are other possibilities besides.
+        </p>
+        <p>
+          To build for the web, developers use React in tandem with ReactDOM.
+          React and ReactDOM are often discussed in the same spaces as — and
+          utilized to solve the same problems as — other true web development
+          frameworks. When we refer to React as a "framework", we’re working
+          with that colloquial understanding.
+        </p>
+        <p>
+          React's primary goal is to minimize the bugs that occur when
+          developers are building UIs. It does this through the use of
+          components — self-contained, logical pieces of code that describe a
+          portion of the user interface. These components can be composed
+          together to create a full UI, and React abstracts away much of the
+          rendering work, leaving you to concentrate on the UI design.
+        </p>
+      </section>
+
+      <section class="main-section" id="Use_cases">
+        <header><a  href="#Use_cases">Uses of React</a></header>
+        <p>
+          Unlike the other frameworks covered in this module, React does not
+          enforce strict rules around code conventions or file organization.
+          This allows teams to set conventions that work best for them, and to
+          adopt React in any way they would like to. React can handle a single
+          button, a few pieces of an interface, or an app's entire user
+          interface.
+        </p>
+        <p>
+          While React can be used for small pieces of an interface, it's not as
+          easy to "drop into" an application as a library like jQuery, or even a
+          framework like Vue — it is more approachable when you build your
+          entire app with React.
+        </p>
+        <p>
+          In addition, many of the developer-experience benefits of a React app,
+          such as writing interfaces with JSX, require a compilation process.
+          Adding a compiler like Babel to a website makes the code on it run
+          slowly, so developers often set up such tooling with a build step.
+          React arguably has a heavy tooling requirement, but it can be learned.
+        </p>
+
+      </section>
+
+      <section class="main-section" id="How_does_React_use_JavaScript?">
+        <header><a  href="How_does_React_use_JavaScript?">How does React utilizes JavaScript<span>?</span></a></header>
+        <p>React utilizes features of modern JavaScript for many of its patterns. Its biggest departure from JavaScript comes with the use of JSX syntax. JSX extends JavaScript's syntax so that HTML-like code can live alongside it. For example:</p>
+        <code
+          >const heading = <span><</span>header<span>></span>Mozilla Developer
+          Network<span><</span>/header<span>></span>;</code
+        >
+        <p>
+          This heading constant is known as a JSX expression. React can use it
+          to render that <span><</span>header<span>></span> tag in our app.
+        </p>
+        <p>
+          Suppose we wanted to wrap our heading in a <span><</span>header<span
+            >></span
+          >
+          tag, for semantic reasons? The JSX approach allows us to next our
+          elements within each other, just like we do with HTML:
+        </p>
+        <code
+          >const header = ( <br> <span><</span>header <br> <</span>header<span>></span>Mozilla Developer Networkspan><</span>/header<span>></span>
+          <span><</span>/header<span>></span> <br> );
+        </code>
+        <h2><a target="_blank" href="https://developer.mozilla.org/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_getting_started#exploring_our_first_react_component_%E2%80%94_%3Capp%3E">For more info...</a></h2>
+      </section>
+
+      <section class="main-section" id="Setting_up_your_first_React_app">
+        <header><a  href="#Setting_up_your_first_React_app">Setting up your first React app</a></header>
+        <p>There are many ways to use React, but we're going to use the command-line interface (CLI) tool create-react-app, as mentioned earlier, which expedites the process of developing a React application by installing some packages and creating some files for you, handling the tooling described above.</p>
+        <p>It's possible to add React to a website without create-react-app by copying some <span><</span>script<span>></span> elements into an HTML file, but the create-react-app CLI is a common starting point for React applications. Using it will allow you spend more time building your app, and less time fussing with setup.</p>
+        
+        <div class="fourth sub" id="Requirements">
+          <a href="#Requirements" >Requirements</a>
+          <p>In order to use create-react-app, you need to have Node.js installed. It's recommended that you use the long-term support (LTS) version. Node includes npm (the node package manager), and npx (the node package runner).</p>
+          <p>You may also use the Yarn package manager as an alternative, but we'll assume you are using npm in this set of tutorials. See Package management basics for more information on npm and yarn.</p>
+        </div>
+
+        <div class="fourth sub" id="Initializing_your_app">
+          <a href="#Initializing_your_app" >Initializing your app</a>
+          <p>create-react-app takes one argument: the name you'd like to give your app. create-react-app uses this name to make a new directory, then creates the necessary files inside it. Make sure you <code>cd</code> to the place you'd like your app to live on your hard drive, then run the following in your terminal:</p>
+          <code>npx create-react-app moz-todo-react
+          </code>
+          <p>This creates a <code class="text">moz-todo-react</code> directory, and does several things inside it:</p>
+          <ul>
+            <li>Installs some npm packages essential to the functionality of the app.</li>
+            <li>Writes scripts for starting and serving the application.</li>
+            <li>Creates a structure of files and directories that define the basic app architecture.</li>
+            <li>Initializes the directory as a git repository, if you have git installed on your computer.</li>
+          </ul>
+        
+        </div>
+      </section>
+
+      <section class="main-section" id="Exploring_our_first_React_component_App">
+        <header>
+          <a href="#Exploring_our_first_React_component_App" class="fifth" 
+            >Exploring our first React component App</a>
+        </header>
+        <p>In React, a component is a reusable module that renders a part of our app. These parts can be big or small, but they are usually clearly defined: they serve a single, obvious purpose.</p>
+        <p>Let's open <code class="text">src/App.js</code>, since our browser is prompting us to edit it. This file contains our first component, <code class="text">App</code>, and a few other lines of code:</p>
+
+        <code>
+          import React from 'react'; <br>
+          import logo from './logo.svg';<br>
+          import './App.css';<br>
+          <br>
+          function App() {  <br>
+            return ( <br>
+              <span><</span>div className="App"><br>
+                <span><</span>header className="App-header"><br>
+                  <span><</span>img src={logo} className="App-logo" alt="logo" /> <br>
+                  <span><</span>p> <br>
+                    Edit <span><</span>code>src/App.js<span><</span>/code> and save to reload. <br>
+                    <span><</span>/p> <br>
+                    <span><</span>a <br>
+                    className="App-link" <br>
+                    href="https://reactjs.org" <br>
+                    target="_blank" <br>
+                    rel="noopener noreferrer" <br>
+                  > <br>
+                    Learn React <br>
+                    <span><</span>/a> <br>
+                    <span><</span>/header> <br>
+                    <span><</span>/div> <br>
+            ); <br>
+          } <br>
+          export default App;
+        </code>
+        <p>The <code class="text">App.js</code>  file consists of three main parts: some <code class="text">import</code> statements at the top, the <code class="text">App</code> component in the middle, and an <code class="text">export</code> statement at the bottom. Most React components follow this pattern.</p>
+        
+        <div class="fifth sub" id="Import_statements">
+          <a href="#Import_statements" >Import statements</a>
+          <p>The <code class="text">import</code> statements at the top of the file allow <code class="text">App.js</code> to use code that has been defined elsewhere. Let's look at these statements more closely.</p>
+          <code>import React from 'react';
+            import logo from './logo.svg';
+            import './App.css';
+          </code>
+          <p>The first statement imports the React library itself. Because React turns the JSX we write into React.createElement(), all React components must import the React module. If you skip this step, your application will produce an error.</p>
+          <p>The second statement imports a logo from './logo.svg'. Note the use of ./ at the beginning of the path, and the .svg extension at the end — these tell us that the file is local and that it is not a JavaScript file. Indeed, the logo.svg file lives in our source directory.</p>
+          <p>We don't write a path or extension when importing the React module — this is not a local file; instead, it is listed as a dependency in our package.json file. Be careful of this distinction as you work through this lesson!</p>
+          <p>The third statement imports the CSS related to our App component. Note that there is no variable name and no from directive. This particular import syntax is not native to JavaScript module syntax — it comes from Webpack, the tool create-react-app uses to bundle all our JavaScript files together and serve them to the browser.</p>
+        </div>
+        <div class="fifth sub" id="The_App_component">
+          <a href="#The_App_component" >The App component</a>
+          <p>After the imports, we have a function named App. Whereas most of the JavaScript community prefers camel-case names like helloWorld, React components use pascal-case variable names, like HelloWorld, to make it clear that a given JSX element is a React component, and not a regular HTML tag. If you were to rename the App function to app, your browser would show you an error.</p>
+        </div>
+        <div class="fifth sub" id="Export_statements">
+          <a href="#Export_statements" >Export statements</a>
+          <p>At the very bottom of the App.js file, the statement export default App makes our App component available to other modules.</p>
+        </div>
+      </section>
+    </main>
+  </div>
+  </body>
+</html>
